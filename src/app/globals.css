@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #1b1b1b;
+  --bg-page: #fcfcfc;
+  --bg-surface: #ffffff;
+  --bg-hover: #f3f3f4;
+  --text-primary: #1b1b1b;
+  --text-secondary: #6b6b6f;
+  --border-line: #e6e6e8;
+  --border-ring: #c8c8cc;
+  --font-card: var(--font-outfit), "Helvetica Neue", Helvetica, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.holo-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-line);
+  background: linear-gradient(
+    to right,
+    var(--bg-hover) 0%,
+    var(--bg-hover) var(--pct, 0%),
+    var(--bg-page) var(--pct, 0%),
+    var(--bg-page) 100%
+  );
+  cursor: pointer;
+  outline: none;
+}
+
+.holo-range:focus-visible {
+  box-shadow: 0 0 0 1px var(--border-ring);
+}
+
+.holo-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 1rem;
+  border-radius: 999px;
+  background: var(--text-primary);
+  opacity: 0.45;
+}
+
+.holo-range::-moz-range-thumb {
+  width: 3px;
+  height: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--text-primary);
+  opacity: 0.45;
+}
