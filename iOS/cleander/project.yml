@@ -1,0 +1,27 @@
+name: Cleander
+options:
+  bundleIdPrefix: com.cleander
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    INFOPLIST_FILE: Cleander/Info.plist
+    PRODUCT_BUNDLE_IDENTIFIER: com.imaad.cleander
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    GENERATE_INFOPLIST_FILE: false
+    DEVELOPMENT_TEAM: ""
+targets:
+  Cleander:
+    type: application
+    platform: iOS
+    sources:
+      - Cleander
+    settings:
+      base:
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
